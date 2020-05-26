@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import './css/style.css';
 import './App.css';
+import 'primeicons/primeicons.css';
+
+import TelaContato from "./windows/contato"
+import Home from "./home"
+import QuemSomos from "./windows/quemSomos"
+import Produtos from "./windows/produtos"
+import Clientes from "./windows/clientes"
+import Intranet from "./windows/intranet"
 
 function App() {
-  return (
+
+  const [contato,setContato]=useState(<Home/>)
+
+    return (
+
     <div className="App">
+         
+      <div className="topo">
+        <div className="menu">
+          <label id="item" className="pi pi-home" onClick={() => setContato(<Home/>)}>Home    </label>
+          <label id="item" className="pi pi-comment" onClick={() => setContato(<TelaContato/>)}>Fale Conosco     </label>
+          <label id="item" className="pi pi-info-circle" onClick={() => setContato(<QuemSomos/>)}>Quem Somos     </label>
+          <label id="item" className="pi pi-shopping-cart" onClick={() => setContato(<Produtos/>)}>Produtos     </label>
+          <label id="item" className="pi pi-star" onClick={() => setContato(<Clientes/>)}>Clientes     </label>
+          <label id="item" className="pi pi-users" onClick={() => setContato(<Intranet/>)}>Intranet     </label>
+          </div>
+      </div>
+
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+           {contato}
+        
       </header>
+      <div className="rodape">
+          Desenvolvido por JAM Tecnologia
+      </div>
     </div>
   );
 }

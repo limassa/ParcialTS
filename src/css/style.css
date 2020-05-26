@@ -1,0 +1,36 @@
+.topo{
+  background-color: skyblue;
+  padding: 20px;
+  height: 20px;
+  font-style: normal;
+  text-emphasis-color: white;
+}
+
+.rodape{
+  background-color: skyblue;
+  padding: 20px;
+  height: 20px;
+  font-size: 10px;
+  font-style: normal;
+}
+
+.faleconosco{
+   color: black;
+}
+
+#item{
+  margin: 0px 10px 20px ;
+}
+
+.telaLogin{
+
+  padding: 3px;
+  width: 375px; 
+  height: 213px;
+  float: left;
+  background-color: skyblue;
+  color: black;
+  font-size: 15px;
+  font-family: Calibri;
+  }
+
